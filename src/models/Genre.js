@@ -1,7 +1,7 @@
 class Genre {
-    constructor(name, post) {
+    constructor(name) {
         this.name = name;
-        this.post = post;
+        
     }
 }
 
