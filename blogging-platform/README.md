@@ -1,1 +1,1 @@
-Cristina and Emi's Blog
+Welcome to our cat blog! Home to all the cats ♥

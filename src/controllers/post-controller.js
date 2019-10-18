@@ -7,9 +7,9 @@ module.exports = {
         const body = req.body.body;
         const author = req.body.author;
         const publishDate = req.body.publishDate;
-        const genre = req.body.genre;
+        const category = req.body.category;
         const tag = req.body.tag;
-        await postService.save(new Post (title, body, author, publishDate, genre, tag))//???? 
+        await postService.save(new Post (title, body, author, publishDate, category, tag))//???? 
     },
 
     async renderAll(req, res) {
