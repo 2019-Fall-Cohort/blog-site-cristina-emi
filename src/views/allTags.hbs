@@ -1,4 +1,12 @@
-{{#each}}
-    {{else}}
-        <p class="empty">No content</p>
-{{/each}}
+// util/db.js
+
+const mysql = require('mysql2')
+
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  database: 'library',
+  password: 'password' // replace this with the password to your database (hopefully it isn't 'password')
+})
+
+module.exports = pool.promise()
