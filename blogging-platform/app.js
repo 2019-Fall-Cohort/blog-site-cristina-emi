@@ -9,6 +9,7 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -37,5 +38,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+sequelize.sync()
+  .then(() => console.log('DB Connected'))
+  .catch(console.error);
 
 module.exports = app;

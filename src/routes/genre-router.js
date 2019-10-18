@@ -1,12 +1,12 @@
 const express = ('express');
 const router = express.Router();
 
-const GenreController = require("../controllers/genre-controller");
+const CategoryController = require("../controllers/category-controller");
 
-/* GET all genres */
-router.get('/allgenres/', GenreController.renderAll);
+/* GET all categories */
+router.get('/allcategories/', CategoryController.renderAll);
 
-/* POST new genre */
-router.post('/allgenres/new', GenreController.addGenre);
+/* POST new category */
+router.post('/allcategories/new', CategoryController.addCategory);
 
 module.exports = router;

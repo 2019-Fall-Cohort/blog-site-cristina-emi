@@ -1,10 +1,10 @@
 class Post {
-  constructor(title, body, author, publishDate, genre, tag) {
+  constructor(title, body, author, publishDate, category, tag) {
     this.title = title;
     this.body = body;
     this.author = author;
     this.publishDate = publishDate;
-    this.genre = genre;
+    this.category = category;
     this.tag = tag;
   }
 }
