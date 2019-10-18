@@ -7,6 +7,6 @@ const AuthorController = require('..controllers/author-controller');
 router.get('/allauthors/', AuthorController.renderAll); 
 
 //  POST single author //
-router.post ('/', AuthorController.addAuthor)
+router.post ('/allauthors/new', AuthorController.addAuthor)
 
 module.exports = router;

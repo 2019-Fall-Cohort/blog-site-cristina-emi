@@ -7,7 +7,7 @@ const PostController = require('./controllers/post-controller');
 router.get('/allposts/', PostController.renderAll);
 
 //GET single post
-router.get('/allposts/', PostController.renderSingle);
+router.get('/allposts/:id', PostController.renderSingle);
 
 /*POST new post*/
 router.post('/allposts/new', PostController.addPost);
