@@ -21,4 +21,4 @@ const Author = sequelize.define('author', {
 Post.belongsTo(Author, { constraints: true, onDelete: 'CASCADE' })
 Author.hasMany(Post)
 
-module.exports = Author
+module.exports = Author;

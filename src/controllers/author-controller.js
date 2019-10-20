@@ -11,3 +11,5 @@ module.exports = {
         res.render("/allauthors" , {authors: await authorService.findAll()})
     }
 }
+
+module.exports = controller;

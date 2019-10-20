@@ -11,3 +11,5 @@ module.exports = {
         res.render("/alltags" , {tags: await tagService.findAll()})
     }
 }
+
+module.exports = controller;
