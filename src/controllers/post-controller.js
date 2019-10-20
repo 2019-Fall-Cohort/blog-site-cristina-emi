@@ -11,11 +11,14 @@ module.exports = {
         const publishDate = req.body.publishDate;
         const category = req.body.category;
         const tag = req.body.tag;
-        await postService.save(new postDomainObject (title, body, author, publishDate, category, tag))//???? 
+
+        const newPost = new postDomainObject(title, body, author, publishDate, category, tag)
+        await postService.save(newPost)
+        res.redirect("/allposts")
     },
 
     async renderAll(req, res) {
-        res.render("/allposts/" , {posts: await postService.findAll()})
+        res.render("/allposts" , {posts: await postService.findAll()})
     },
 
     async renderSingle (req,res) {

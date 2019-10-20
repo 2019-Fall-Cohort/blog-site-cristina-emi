@@ -3,8 +3,11 @@ const authorDomainObject = require("./models/Author.js")
 
 module.exports = {
     async addAuthor(req, res) {
-        const name = req.body.name 
-        await authorService.save(new authorDomainObject (name))//???? 
+        const name = req.body.name;
+
+        const newAuthor = new authorDomainObject(name)
+        await authorService.save(newAuthor)//????
+        res.redirect("/allauthors") 
     },
 
     async renderAll(req, res) {

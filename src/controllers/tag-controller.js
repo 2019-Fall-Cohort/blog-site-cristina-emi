@@ -3,8 +3,11 @@ const tagDomainObject = require("./models/Tag.js")
 
 module.exports = {
     async addTag(req, res) {
-        const name = req.body.name 
-        await tagService.save(new tagDomainObject (name))//???? 
+        const name = req.body.name
+
+        const newTag = new tagDomainObject(name)
+        await tagService.save(newTag)//????
+        res.redirect("/alltags")
     },
 
     async renderAll(req, res) {

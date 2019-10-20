@@ -4,7 +4,10 @@ const categoryDomainObject = require("./models/category.js")
 module.exports = {
     async addCategory(req, res) {
         const name = req.body.name
-        await categoryService.save(new categoryDomainObject (name))
+
+        const newCategory = new categoryDomainObject(name)
+        await categoryService.save(newCategory)
+        res.redirect("/allcategories")
     },
 
     async renderAll(req, res) {

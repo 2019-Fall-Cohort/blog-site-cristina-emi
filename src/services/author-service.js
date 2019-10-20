@@ -8,3 +8,4 @@ module.exports = {
         Author.create(author).then(callback)
     }
 }; 
+
