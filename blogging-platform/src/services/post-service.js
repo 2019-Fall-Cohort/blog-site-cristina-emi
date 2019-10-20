@@ -1,11 +1,11 @@
 const Post = require('../models/Post.sequelize')
 
 module.exports = {
-    findAll (callback) {
-        Post.findAll().then(callback);
+    async findAll () {
+        await Post.findAll();
     },
 
-    save (post, callback) {
-        Post.create(post).then(callback)
+    async save (post) {
+        await Post.create(post)
     }
 }; 
