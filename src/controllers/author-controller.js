@@ -1,5 +1,5 @@
-const authorService = require("./services/author-service")
-const authorDomainObject = require("./models/Author.js.js")
+const authorService = require("../services/author-service")
+const authorDomainObject = require("../models/Author")
 
 module.exports = {
     async addAuthor(req, res) {

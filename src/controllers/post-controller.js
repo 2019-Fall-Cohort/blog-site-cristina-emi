@@ -1,7 +1,7 @@
-const postDomainObject = require("./models/Post.js.js")
-const postService = require("./services/post-service")
-const categoryService = require("./services/category-service")
-const tagService = require("./services/tag-service")
+const postDomainObject = require("../models/Post")
+const postService = require("../services/post-service")
+const categoryService = require("../services/category-service")
+const tagService = require("../services/tag-service")
 
 module.exports = {
     async addPost(req, res) {
