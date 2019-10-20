@@ -22,6 +22,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/allposts', post-router);
+app.use('/allposts/:id', post-router);
+app.use('/allposts/new', post-router);
+app.use('/allauthors', author-router);
+app.use('/allauthors/new', author-router);
+app.use('/allcategories', category-router);
+app.use('/allcategories/new', category-router);
+app.use('/alltags', tag-router);
+app.use('/alltags/new', tag-router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
