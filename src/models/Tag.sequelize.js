@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
-
 const sequelize = require('../utils/database')
+const Post = require('./Post.sequelize')
 
 const Tag = sequelize.define('tag', {
   id: {

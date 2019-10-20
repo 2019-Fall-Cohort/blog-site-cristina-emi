@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
-
 const sequelize = require('../utils/database')
+const Post = require('./Post.sequelize')
 
 const Author = sequelize.define('author', {
   id: {
@@ -15,6 +15,8 @@ const Author = sequelize.define('author', {
     allowNull: false
   },
 });
+
+
 
 Post.belongsTo(Author, { constraints: true, onDelete: 'CASCADE' })
 Author.hasMany(Post)
