@@ -1,11 +1,11 @@
 const Category = require('../models/Category.sequelize')
 
 module.exports = {
-    findAll (callback) {
-        Category.findAll().then(callback);
+    async findAll () {
+        await Category.findAll();
     },
 
-    save (category, callback) {
-        Category.create(category).then(callback)
+    async save (category) {
+        await Category.create(category)
     }
 }; 

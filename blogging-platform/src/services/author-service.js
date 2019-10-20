@@ -1,11 +1,11 @@
 const Author = require('../models/Author.sequelize')
 
 module.exports = {
-    findAll (callback) {
-        Author.findAll().then(callback);
+    async findAll () {
+        await Author.findAll();
     },   
-    save (author, callback) {
-        Author.create(author).then(callback)
+    async save (author) {
+        await Author.create(author)
     }
 }; 
 
