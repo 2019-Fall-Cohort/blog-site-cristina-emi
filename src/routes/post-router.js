@@ -12,4 +12,4 @@ router.get('/allposts/:id', PostController.renderSingle);
 /*POST new post*/
 router.post('/allposts/new', PostController.addPost);
 
-module.exports = post;
+module.exports = router;

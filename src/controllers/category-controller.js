@@ -14,5 +14,3 @@ module.exports = {
         res.render("/allcategories", {categories: await categoryService.findAll()})
     }
 }
-
-module.exports = controller;
