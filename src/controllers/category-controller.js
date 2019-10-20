@@ -1,5 +1,5 @@
-const categoryService = require("./services/category-service")
-const categoryDomainObject = require("./models/category.js")
+const categoryService = require("../services/category-service")
+const categoryDomainObject = require("../models/Category")
 
 module.exports = {
     async addCategory(req, res) {

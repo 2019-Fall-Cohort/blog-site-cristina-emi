@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const PostController = require('./controllers/post-controller');
+const PostController = require('../controllers/post-controller');
 
 /* GET all posts */
 router.get('/allposts/', PostController.renderAll);
