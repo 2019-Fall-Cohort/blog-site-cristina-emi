@@ -15,7 +15,7 @@ const Category = sequelize.define('category', {
   },
 });
 
-Post.belongsTo(Category, { constraints: true, onDelete: 'CASCADE' })
-Category.hasMany(Post)
+Post.belongsToMany(Category, { through: 'category_post' })
+Category.belongsToMany(Post, { through: 'category_post' })
 
 module.exports = Category

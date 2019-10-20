@@ -15,7 +15,7 @@ const Tag = sequelize.define('tag', {
   },
 });
 
-Post.belongsToMany(Tag, { constraints: true, onDelete: 'CASCADE' })
-Tag.hasMany(Post)
+Post.belongsToMany(Tag, { through: 'tag_post' })
+Tag.belongsToMany(Post, { through: 'tag_post' })
 
 module.exports = Tag
