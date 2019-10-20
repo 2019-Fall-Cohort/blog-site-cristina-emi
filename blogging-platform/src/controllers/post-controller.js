@@ -1,4 +1,4 @@
-const postDomainObject = require("./models/Post.js")
+const postDomainObject = require("./models/Post.js.js")
 const postService = require("./services/post-service")
 const categoryService = require("./services/category-service")
 const tagService = require("./services/tag-service")
@@ -23,7 +23,8 @@ module.exports = {
 
     async renderSingle (req,res) {
         const post = Number(req.params.id);
-        postService.find
+        postService.findById()
+            res.render("post/single", {post});
 
     }
 }

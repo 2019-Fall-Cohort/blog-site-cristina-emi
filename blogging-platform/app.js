@@ -4,8 +4,12 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const indexRouter = require('./src/routes/index');
+const usersRouter = require('./src/routes/users');
+const postRouter = require('./src/routes/post-router');
+const authorRouter = require('./src/routes/author-router');
+const categoryRouter = require('./src/routes/category-router');
+const tagRouter = require('./src/routes/tag-router');
 
 const app = express();
 
@@ -22,15 +26,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/allposts', post-router);
-app.use('/allposts/:id', post-router);
-app.use('/allposts/new', post-router);
-app.use('/allauthors', author-router);
-app.use('/allauthors/new', author-router);
-app.use('/allcategories', category-router);
-app.use('/allcategories/new', category-router);
-app.use('/alltags', tag-router);
-app.use('/alltags/new', tag-router);
+app.use('/allposts', postRouter);
+app.use('/allposts/:id', postRouter);
+app.use('/allposts/new', postRouter);
+app.use('/allauthors', authorRouter);
+app.use('/allauthors/new', authorRouter);
+app.use('/allcategories', categoryRouter);
+app.use('/allcategories/new', categoryRouter);
+app.use('/alltags', tagRouter);
+app.use('/alltags/new', tagRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
