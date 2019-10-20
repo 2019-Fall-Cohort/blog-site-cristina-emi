@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const AuthorController = require('..controllers/author-controller');
+const AuthorController = require('../controllers/author-controller');
 
 /* GET all authors */
 router.get('/allauthors/', AuthorController.renderAll); 
