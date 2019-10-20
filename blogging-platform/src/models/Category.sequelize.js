@@ -1,14 +1,13 @@
 const Sequelize = require('sequelize')
-
 const sequelize = require('../utils/database')
+const Post = require('./Post.sequelize')
 
-const Author = sequelize.define('author', {
+const Category = sequelize.define('category', {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true
-  
   },
   name: {
     type: Sequelize.STRING,
@@ -16,7 +15,7 @@ const Author = sequelize.define('author', {
   },
 });
 
-Post.belongsTo(Author, { constraints: true, onDelete: 'CASCADE' })
-Author.hasMany(Post)
+Post.belongsTo(Category, { constraints: true, onDelete: 'CASCADE' })
+Category.hasMany(Post)
 
-module.exports = Author
+module.exports = Category
