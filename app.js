@@ -11,6 +11,7 @@ const postRouter = require('./src/routes/post-router');
 const authorRouter = require('./src/routes/author-router');
 const categoryRouter = require('./src/routes/category-router');
 const tagRouter = require('./src/routes/tag-router');
+const generateStartingData  = require('./src/data/starting-data');
 
 const app = express();
 
@@ -54,7 +55,9 @@ app.use(function(err, req, res, next) {
 });
 
 sequelize.sync()
-  .then(() => console.log('DB Connected'))
+  .then(() => {console.log('DB Connected')
+  generateStartingData()
+  })
   .catch(console.error);
 
 module.exports = app;
