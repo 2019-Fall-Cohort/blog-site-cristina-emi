@@ -1,0 +1,37 @@
+<div class="post-form-wrapper">
+    <form class="post-form__form" action="/allposts" method="POST">
+
+
+    <article class="post-form">
+        <h1>Show Us Your Kitty:</h1>
+        <input type="text" name="title">Post Title</input>
+
+        <textarea placeholder="Tell us about your cat" rows="4" cols="50" name="postBody" required></textarea>
+
+        <label>
+            Author:
+            <input type="text" name="author"></input>
+        </label>
+
+
+        <label>
+            <select name="category">
+                {{#each category}}
+                    <option value="{{id}}">{{category}}</option>
+                {{/each}}
+            </select>
+        </label>
+
+        <ul class="post-form__tags-list">
+            {{#each tags}}
+            <input class="post-form__tags-list-item" type="checkbox" name="tags" value={{name}}> </input>
+            {{/each}}
+         </ul>
+         <button id="submitButton"> Submit Blog Post</button>
+
+    </article> 
+
+    </form>
+
+</div>
+

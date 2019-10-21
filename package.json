@@ -2,7 +2,8 @@
   "name": "blogging-platform",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
+  "scripts": { 
+    "test": "jest init --colors --watchAll",
     "start": "nodemon app.js"
   },
   "dependencies": {
@@ -18,7 +19,9 @@
   },
   "description": "Cristina and Emi's Blog",
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
