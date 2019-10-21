@@ -1,4 +1,15 @@
-{{#each}}
-    {{else}}
-        <p class="empty">No content</p>
-{{/each}}
+<div class="post-card__wrapper">
+    <section>
+        {{#each post}}
+            <article>
+                <h3 class="title">{{title}}</h3>
+                <h4 class="publishingInfo">{{author}}, {{publishDate}}</h4>
+                <p class="body">{{body}}</p>
+                <footer class="footer">{{category}}, {{tag}}</footer>
+            </article>
+        {{else}}
+            <p class="empty">No content</p>
+        {{/each}}
+    </section>   
+    <a href="/">Go Back</a>
+</div>

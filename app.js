@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sequelize = require('./src/utils/database')
+const port = 3000
 
 const indexRouter = require('./src/routes/index');
 const usersRouter = require('./src/routes/users');
@@ -15,6 +16,9 @@ const generateStartingData  = require('./src/data/starting-data');
 
 const app = express();
 
+app.get('/', (req, res) => res.render('/'))
+
+app.listen(port, () => console.log('App is listening on port ${port}.'))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

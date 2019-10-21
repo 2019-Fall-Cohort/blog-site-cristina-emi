@@ -1,12 +1,15 @@
 <h2>Most Recent Posts</h2>
 
-<section name="post">
+<section class="post">
     {{#each post}}
-    <h3 name="title">{{title}}</h3>
-    <h4 name="publishingInfo">{{author}}, {{publishDate}}</h4>
-    <p name="body">{{body}}</p>
-    <footer name="footer">{{category}}, {{tag}}</footer>
+    <article>
+        <h3 class="title">{{title}}</h3>
+        <h4 class="publishingInfo">{{author}}, {{publishDate}}</h4>
+        <p class="body">{{body}}</p>
+        <footer class="footer">{{category}}, {{tag}}</footer>
+    </article>
     {{else}}
         <p class="empty">No content</p>
     {{/each}}
 </section>
+<a href="/">Go Back</a>

@@ -10,12 +10,12 @@
 
         <label>
             Author:
-            <input type="text" name="author"></input>
+            <input type="text" name="author">{{author}}</input>
         </label>
 
 
         <label>
-            <select name="category">
+            <select class="category">
                 {{#each category}}
                     <option value="{{id}}">{{category}}</option>
                 {{/each}}

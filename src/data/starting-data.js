@@ -1,4 +1,4 @@
-const Author = require('../models/Author.sequelize');
+/* const Author = require('../models/Author.sequelize');
 const Category = require('../models/Category.sequelize');
 const Post = require('../models/Post.sequelize');
 const Tag = require('../models/Tag.sequelize');
@@ -28,4 +28,4 @@ const generateStartingData = () => {
     })
 };
 
-module.exports = generateStartingData;
+module.exports = generateStartingData; */
